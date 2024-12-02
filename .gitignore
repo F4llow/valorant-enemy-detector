@@ -1,0 +1,27 @@
+# Python virtual environments
+venv/
+venv2/
+.env
+.venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Model files and training data
+*.pt
+models/
+runs/
+
+# Temporary directories
+uploads/
+results/
+evaluation_results/
+
+# Backup files
+*2.txt
+
+# OS-specific files
+.DS_Store
+Thumbs.db

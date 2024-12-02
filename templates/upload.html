@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Valorant Enemy Detector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f2f5;
+        }
+        .upload-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .upload-form {
+            margin-top: 20px;
+        }
+        .file-input {
+            margin: 10px 0;
+        }
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-container">
+        <h1>Valorant Enemy Detector</h1>
+        <form class="upload-form" action="/" method="post" enctype="multipart/form-data">
+            <div class="file-input">
+                <input type="file" name="file" accept="image/*" required>
+            </div>
+            <input class="submit-btn" type="submit" value="Detect Enemies">
+        </form>
+    </div>
+</body>
+</html>
