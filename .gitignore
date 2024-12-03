@@ -10,7 +10,6 @@ __pycache__/
 *$py.class
 
 # Model files and training data
-*.pt
 runs/
 
 # Temporary directories
