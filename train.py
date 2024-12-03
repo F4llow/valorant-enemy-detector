@@ -13,11 +13,16 @@ def main():
     # Train the model
     results = model.train(
         data='C:/Users/NCallabresi/Documents/ValorantAgentsDataset2/v8/Valorant-Object-Detection-22/data.yaml',
-        epochs=100,
+        epochs=9,  # Changed to 9 epochs
         imgsz=640,
         batch=16,
-        device='cuda' if torch.cuda.is_available() else 'cpu'
+        device='cuda' if torch.cuda.is_available() else 'cpu',
+        project='runs/detect',  # project folder
+        name='train'  # experiment name
     )
+
+    # Save the model
+    model.save('best.pt')  # Save with a specific name
 
 if __name__ == '__main__':
     main()
