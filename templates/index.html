@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Valorant Object Detector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .upload-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .upload-btn {
+            background-color: #ff4655;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .upload-btn:hover {
+            background-color: #ff5c6a;
+        }
+        #file-name {
+            margin-top: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-container">
+        <h1>Valorant Object Detector</h1>
+        <form action="/detect" method="post" enctype="multipart/form-data">
+            <input type="file" id="file" name="file" accept="image/*" style="display: none;" onchange="updateFileName()">
+            <label for="file" class="upload-btn">Choose Image</label>
+            <div id="file-name"></div>
+            <button type="submit" class="upload-btn" style="margin-left: 10px;">Detect Objects</button>
+        </form>
+    </div>
+
+    <script>
+        function updateFileName() {
+            const input = document.getElementById('file');
+            const fileName = document.getElementById('file-name');
+            fileName.textContent = input.files[0].name;
+        }
+    </script>
+</body>
+</html>
