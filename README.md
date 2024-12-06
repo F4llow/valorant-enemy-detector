@@ -135,10 +135,12 @@ The training script includes:
 
 ## 📥 Dataset
 
-The dataset was managed using Roboflow and can be downloaded using the provided `download.py` script. The dataset includes:
+The dataset was managed using Roboflow and can be downloaded using the provided `download.py` script. The dataset is available at [Valorant Object Detection Dataset](https://universe.roboflow.com/valorant-object-detection/valorant-object-detection-r9qkl/dataset/22) and includes:
 - Valorant gameplay screenshots
 - Annotated enemy positions
 - Various game scenarios and maps
+
+Special thanks to the Roboflow community and the dataset creators for making this resource available.
 
 ## 🤝 Contributing
 
