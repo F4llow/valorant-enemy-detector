@@ -142,6 +142,18 @@ The dataset was managed using Roboflow and can be downloaded using the provided 
 
 Special thanks to the Roboflow community and the dataset creators for making this resource available.
 
+## 📸 Demonstration
+
+Here's a quick look at the application in action:
+
+### Homepage
+![Homepage](demo/homepage.png)
+
+### Detection Results
+![Detection Results](demo/results.png)
+
+The application provides a clean, user-friendly interface for uploading images and displays comprehensive detection results with bounding boxes and confidence scores.
+
 ## 🤝 Contributing
 
 1. Fork the repository
