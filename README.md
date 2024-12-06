@@ -108,11 +108,18 @@ The model was trained using YOLOv8 on a custom Valorant dataset. The training pr
 
 ```python
 # Key training parameters
-epochs = 100
-image_size = 640
-batch_size = 32
-workers = 8
-patience = 50  # Early stopping
+model.train(
+    data=data_yaml_path,
+    epochs=100,
+    imgsz=640,
+    batch=32,
+    device=0,
+    workers=8,
+    name='valorant_model',
+    patience=50,
+    save=True,
+    cache=True
+)
 ```
 
 Training infrastructure:
