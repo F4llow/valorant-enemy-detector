@@ -63,6 +63,8 @@ http://localhost:5000
 valorant-enemy-detector/
 ├── app.py              # Main Flask application
 ├── predict.py          # YOLOv8 prediction logic
+├── train.py           # Training script for YOLOv8 model
+├── download.py        # Dataset download script
 ├── requirements.txt    # Python dependencies
 ├── model/
 │   └── weights/
@@ -100,6 +102,37 @@ The application provides comprehensive information about each detection:
   - Confidence score
   - Bounding box coordinates
 
+## 🤖 Training the Model
+
+The model was trained using YOLOv8 on a custom Valorant dataset. The training process is handled by `train.py` and was performed on William & Mary's high-performance computing cluster (bg13.cs.wm.edu) using an NVIDIA A100 GPU for optimal performance.
+
+```python
+# Key training parameters
+epochs = 100
+image_size = 640
+batch_size = 32
+workers = 8
+patience = 50  # Early stopping
+```
+
+Training infrastructure:
+- Hardware: NVIDIA A100 GPU (40GB VRAM)
+- Environment: William & Mary's bg13.cs.wm.edu computing cluster
+- Framework: PyTorch with CUDA acceleration
+
+The training script includes:
+- Automatic CUDA detection and utilization
+- Early stopping for optimal model selection
+- Image caching for faster training
+- Checkpoint saving
+
+## 📥 Dataset
+
+The dataset was managed using Roboflow and can be downloaded using the provided `download.py` script. The dataset includes:
+- Valorant gameplay screenshots
+- Annotated enemy positions
+- Various game scenarios and maps
+
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -117,3 +150,4 @@ This project is open source and available under the MIT License.
 - YOLOv8 by Ultralytics
 - Flask web framework
 - Roboflow for dataset management
+- CUDA for GPU acceleration
